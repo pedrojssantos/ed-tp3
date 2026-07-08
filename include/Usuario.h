@@ -6,6 +6,7 @@
 class Usuario
 {
 private:
+    int _id;
     std::string _nome;
     int _idade;
     std::string _cidade;
@@ -13,11 +14,14 @@ private:
     std::string _nacionalidade;
 public:
     Usuario(
-        std::string& nome,
+        int id,
+        const std::string& nome,
         int idade,
-        std::string& cidade,
-        std::string& estado,
-        std::string& nacionalidade);
+        const std::string& cidade,
+        const std::string& estado,
+        const std::string& nacionalidade);
+
+    int getId() const;
     std::string getNome() const;
     int getIdade() const;
     std::string getCidade() const;
@@ -25,4 +29,4 @@ public:
     std::string getNacionalidade() const;
 };
 
-#endif //USUARIO_H
+#endif // USUARIO_H
