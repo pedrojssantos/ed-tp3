@@ -1,0 +1,4 @@
+# Ignora os diretórios gerados pela compilação
+
+bin/
+obj/
