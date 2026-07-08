@@ -6,26 +6,30 @@
 class Produto
 {
 private:
+    int _id;
     std::string _nome;
     double _preco;
-    int _qtdInicial;
+    int _qtd;
     std::string _categoria;
     std::string _marca;
     std::string _condicao;
 public:
     Produto(
-    std::string& nome,
-    double preco,
-    int qtdInicial,
-    std::string& categoria,
-    std::string& marca,
-    std::string& condicao);
+        int id,
+        const std::string& nome,
+        double preco,
+        int qtd,
+        const std::string& categoria,
+        const std::string& marca,
+        const std::string& condicao);
+    int getId() const;
     std::string getNome() const;
     double getPreco() const;
-    int getQtdInicial() const;
+    int getQtd() const;
     std::string getCategoria() const;
     std::string getMarca() const;
     std::string getCondicao() const;
+    void alterarQtd(int valor);
 };
 
-#endif //PRODUTO_H
+#endif // PRODUTO_H
